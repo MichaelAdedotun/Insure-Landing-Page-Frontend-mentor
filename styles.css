@@ -1,0 +1,481 @@
+/*variables*/
+:root{
+    --primary: hsl(256, 26%, 20%);
+    --secondary:  hsl(216, 30%, 68%);
+}
+
+/*resets*/
+a,ul,li,p,h1,h2{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*base styles*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+/*mobile styles*/
+
+/*header styles*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+header .insure-nav{
+   display: none;
+}
+
+header .insure-mobile-button #open{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+header .insure-mobile-button #close{
+    border: none;
+    background: none;
+    display: none;
+    cursor: pointer;
+}
+
+/*article styles*/
+.article{
+    background: url("images/bg-pattern-mobile-nav.svg") no-repeat hsl(270, 9%, 17%);
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation-name: modalopen;
+    animation-duration:  2s;
+    display: none;
+}
+
+.article.show-modal{
+    display: block;
+}
+
+.article .modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    padding-top: 50px;
+}
+
+.article .modal.show-modal{
+    display: block;
+}
+
+.article .modal li a{
+    color: hsl(0, 0%, 98%);
+    font-size: 1.2em;
+    word-spacing: 5px;
+}
+.article .modal li:nth-of-type(4) a{
+   border: 1px solid hsl(0, 0%, 98%);
+    padding: 5px 20px;
+}
+.article .modal li:nth-of-type(4) a:hover{
+    background-color: hsl(0, 0%, 98%);
+    color: var(--primary);
+}
+
+@keyframes modalopen {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*section insure structure*/
+.insure-structure{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.insure-structure .insure-structure-image{
+    background: url("images/image-intro-mobile.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.insure-structure .insure-structure-text{
+    background: url("images/bg-pattern-intro-left-mobile.svg") no-repeat hsl(256, 26%, 20%);
+    padding: 50px 20px 100px 20px;
+    color: hsl(0, 0%, 98%);
+}
+
+.insure-structure .insure-structure-text .insure-line{
+    display: none;
+}
+
+.insure-structure .insure-structure-text h1{
+    font-size: 3em;
+    line-height: 40px;
+    padding: 50px 0 20px 0;
+}
+.insure-structure .insure-structure-text p{
+    color: hsl(273, 4%, 51%);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+
+.insure-structure .insure-structure-text a{
+    color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 98%);
+    padding: 8px 30px;
+}
+
+.insure-structure .insure-structure-text a:hover{
+    background: hsl(0, 0%, 98%);
+    color: hsl(256, 26%, 20%);
+}
+
+/*section unique styles*/
+.insure-unique{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 50px 20px;
+    position: relative;
+}
+
+.insure-unique .insure-line{
+    width: 150px;
+    height: 2px;
+
+    background-color: hsl(273, 4%, 51%);
+}
+
+.insure-unique h1{
+    font-weight: 700;
+    font-size: 2.5em;
+    padding: 20px 20px 50px 20px;
+}
+
+.insure-unique .insure-unique-content .insure-unique-content-subcontent{
+    margin-bottom: 30px;
+}
+
+.insure-unique .insure-unique-content .insure-unique-content-subcontent img{
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.insure-unique .insure-unique-content .insure-unique-content-subcontent h2{
+    margin-bottom: 15px;
+}
+
+.insure-unique .insure-unique-content .insure-unique-content-subcontent p{
+    padding: 0 60px;
+    color: hsl(273, 4%, 51%);
+}
+
+/*section insure procedure styles*/
+.insure-procedure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("images/bg-pattern-how-we-work-mobile.svg") hsl(256, 26%, 20%) no-repeat;
+    background-position: right;
+    margin: 20px 20px 80px 20px;
+    color: hsl(0, 0%, 98%);
+}
+
+.insure-procedure h2{
+    font-weight: 700;
+    font-size: 3em;
+    padding: 40px 30px;
+    line-height: 40px;
+}
+.insure-procedure a{
+    padding: 8px 20px;
+    color: hsl(0, 0%, 98%);
+    border: 1px solid white;
+    margin-bottom: 50px;
+}
+.insure-procedure a:hover{
+    background-color: white;
+    color: hsl(256, 26%, 20%);
+}
+
+/*footer section styles*/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+    background: url("images/bg-pattern-footer-mobile.svg") no-repeat hsl(0, 0%, 98%);
+}
+
+footer .insure-footer-logo-socialicons{
+    text-align: center;
+    border-bottom: 1px solid hsl(216, 30%, 68%);
+    width: 90%;
+    padding-bottom: 20px;
+}
+footer .insure-footer-logo-socialicons img{
+    margin-bottom: 20px;
+}
+footer .insure-footer-logo-socialicons .insure-social-icons img{
+    margin: 0 10px;
+}
+
+footer .insure-footer-content{
+    margin-top: 20px;
+}
+
+footer .insure-footer-content ul{
+    margin-top: 20px;
+}
+footer .insure-footer-content ul .first{
+    margin-bottom: 20px;
+    color: hsl(273, 4%, 51%);
+}
+
+footer .insure-footer-content ul li a{
+    color: hsl(256, 26%, 20%);
+    line-height: 28px;
+}
+
+/*desktop styles 1200px*/
+@media screen and (min-width: 1200px){
+
+    /*header styles*/
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 120px;
+    }
+
+    header .insure-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .insure-nav li{
+        padding-left: 20px;
+    }
+    header .insure-nav li a{
+        color: hsl(273, 4%, 51%);
+    }
+    header .insure-nav li:nth-child(4) a{
+        padding: 8px 20px;
+        border: 1px solid hsl(256, 26%, 20%);
+        color: hsl(256, 26%, 20%);
+    }
+    header .insure-nav li:nth-child(4) a:hover{
+        color: hsl(0, 0%, 98%);
+        background-color: hsl(256, 26%, 20%);
+    }
+
+    header .insure-mobile-button {
+        display: none;
+    }
+
+    /*article styles*/
+    .article{
+        display: none;
+    }
+
+    /*section insure structure*/
+    .insure-structure{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: url("images/bg-pattern-intro-right-desktop.svg") no-repeat hsl(256, 26%, 20%);
+        background-position: right;
+        padding: 0 120px;
+    }
+
+    .insure-structure .insure-structure-image {
+        background: url("images/image-intro-desktop.jpg") no-repeat;
+        background-size: cover;
+        width: 800px;
+        height: 80vh;
+        margin: 50px 0 -70px 0;
+    }
+
+    .insure-structure .insure-structure-text{
+        background: none;
+        padding: 0;
+        text-align: start;
+        color: hsl(0, 0%, 98%);
+    }
+    .insure-structure .insure-structure-text .insure-line{
+        display: block;
+        width: 200px;
+        height: 2px;
+        margin: -65px 0 40px 0 ;
+        background-color: hsl(273, 4%, 51%);
+    }
+
+    .insure-structure .insure-structure-text h1{
+        font-size: 4em;
+        line-height: 50px;
+    }
+    .insure-structure .insure-structure-text p{
+        color: hsl(273, 4%, 51%);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0 0;
+        margin-bottom: 30px;
+    }
+
+    .insure-structure .insure-structure-text a{
+        color: hsl(0, 0%, 98%);
+        border: 1px solid hsl(0, 0%, 98%);
+        padding: 8px 30px;
+    }
+
+    .insure-structure .insure-structure-text a:hover{
+        background: hsl(0, 0%, 98%);
+        color: hsl(256, 26%, 20%);
+    }
+
+    /*section unique styles*/
+    .insure-unique{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        text-align: start;
+        padding: 150px 120px 50px 120px;
+    }
+    .insure-unique .insure-line{
+        display: block;
+        width: 120px;
+        height: 2px;
+        margin-bottom: -50px;
+        background-color: hsl(273, 4%, 51%);
+    }
+
+    .insure-unique h1{
+        font-weight: 700;
+        font-size: 3em;
+        padding: 80px 0 50px 0;
+    }
+
+    .insure-unique .insure-unique-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .insure-unique .insure-unique-content .insure-unique-content-subcontent{
+        margin-right: 10px;
+    }
+
+    .insure-unique .insure-unique-content .insure-unique-content-subcontent img{
+        width: 60px;
+        margin-bottom: 20px;
+    }
+
+    .insure-unique .insure-unique-content .insure-unique-content-subcontent h2{
+        margin-bottom: 15px;
+    }
+
+    .insure-unique .insure-unique-content .insure-unique-content-subcontent p{
+        text-align: start;
+        padding: 0 30px 0 0;
+        color: hsl(273, 4%, 51%);
+    }
+
+    /*section insure procedure styles*/
+    .insure-procedure{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: url("images/bg-pattern-how-we-work-desktop.svg") hsl(256, 26%, 20%) no-repeat;
+        background-position: right;
+        margin: 50px 120px 150px 120px;
+        padding: 30px 50px;
+    }
+
+    .insure-procedure h2{
+        font-size: 3em;
+        width: 600px;
+        padding: 30px 50px 30px 0;
+        text-align: start;
+    }
+    .insure-procedure a{
+        padding: 8px 15px;
+        color: hsl(0, 0%, 98%);
+        border: 1px solid white;
+        margin-bottom: 0;
+    }
+    .insure-procedure a:hover{
+        background-color: white;
+        color: hsl(256, 26%, 20%);
+    }
+
+
+    /*footer section styles*/
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 120px;
+        background: url("images/bg-pattern-footer-desktop.svg") no-repeat hsl(0, 0%, 98%);
+    }
+
+    footer .insure-footer-logo-socialicons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid hsl(216, 30%, 68%);
+        width: 100%;
+        padding-bottom: 20px;
+
+    }
+
+    footer .insure-footer-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        text-align: start;
+
+    }
+}
