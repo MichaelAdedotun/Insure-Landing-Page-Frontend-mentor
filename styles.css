@@ -4,6 +4,10 @@
     --secondary:  hsl(216, 30%, 68%);
 }
 
+* {
+    padding: 0;
+}
+
 /*resets*/
 a,ul,li,p,h1,h2{
     text-decoration: none;
